@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batman</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="title">
+        <img src="head.png" alt="" class="head">
+    </div>
+<br>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <a href="">
+      <div class="numbertext">1 / 3</div>
+      <img class="slideimg" src="gog3.jpg">
+      </a>
+      
+    </div>
+  
+    <div class="mySlides fade">
+        <a href="">
+      <div class="numbertext">2 / 3</div>
+      <img class="slideimg" src="smac.jpg" >
+    </a>
+    </div>
+  
+    <div class="mySlides fade">
+        <a href="">
+      <div class="numbertext">3 / 3</div>
+      <img class="slideimg" src="ins.jpg">
+    </a>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br><br>
+  
+   <div class="lm">
+    <h1>Latest Movies</h1>
+   </div>
+<div class="mv1">
+  <img class="mvimg" src="gog3.jpg" alt="">
+  <a class="mvlink" href="">
+  <h1 class="mvh">Guardians Of The Galaxy Vol.3</h1>
+</a>
+  <h2 class="mva">🔉 Tamil</h2>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }</script>
+    
+</body>
+</html>
